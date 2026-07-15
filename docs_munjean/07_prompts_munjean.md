@@ -37,8 +37,18 @@ Para completar este proyecto con éxito se utilizaron los siguientes recursos:
 6. **Gemini (Inteligencia Artificial):** Utilizado como asistente virtual de chat en tiempo real para diagnosticar los errores de Nano, corregir las rutas de Nginx y validar el despliegue local.
 
 ---
+## 3. Solicitud de imágenes y correspondencia temática
 
-## 3. Reflexión sobre el Proceso de Trabajo
+Durante la revisión de los documentos, se solicitó que cada sección incluyera la imagen más adecuada para el contenido que estaba explicando. La instrucción fue la siguiente:
+
+- Seleccionar imágenes reales y existentes en la carpeta de documentación.
+- Asegurar que cada imagen corresponda al tema que se está describiendo.
+- Evitar rutas rotas, placeholders o referencias genéricas.
+- Usar capturas coherentes con procesos como instalación, firewall, permisos, paquetes y despliegue de Nginx.
+
+Esta decisión ayudó a que los archivos Markdown quedaran más claros, visuales y profesionales, mejorando la comprensión del laboratorio.
+
+## 4. Reflexión sobre el Proceso de Trabajo
 
 El uso de la Inteligencia Artificial durante este laboratorio representó un cambio metodológico sustancial. Inicialmente, utilicé la IA como un **chatbot de consulta rápida** para resolver dudas sintácticas (como el significado de los comandos en Nano). Sin embargo, a medida que surgieron dificultades de configuración y errores de tipeo con Nginx, la interacción evolucionó a un rol de **asistente técnico/agente de depuración**. 
 

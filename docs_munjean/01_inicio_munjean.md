@@ -14,7 +14,7 @@ El objetivo de este laboratorio es instalar y configurar un servidor virtual con
 
 ---
 
-## 2. TOPOLOGÍA DE CONEXIÓN Y ACCESO AL NODO
+## 2. TOPOLOGÍA 
 Para conectar la máquina virtual de manera segura y poder acceder a ella desde nuestro computador físico (anfitrión), configuramos una topología de red sencilla estructurada de la siguiente manera:
 
 Computador Anfitrión (PC Físico): Es el equipo desde donde trabajamos, utilizando el navegador web para ver los resultados y un cliente SSH nativo para ingresar al servidor.
@@ -31,8 +31,8 @@ Acceso SSH (Puerto 2222 Anfitrión -> Puerto 22 VM): Permite conectarse de forma
 ---
 
 ## 3. ESQUEMA DE INTERFACES ACTIVO 
-Para verificar la estabilidad del enlace antes de la fase de compilación, se adjunta el mapa lógico y visual de red obtenido directamente del gestor de VirtualBox.
+Para verificar la estabilidad del enlace antes de la fase de compilación, se adjunta la captura visual de red obtenido directamente del gestor de VirtualBox.
 
-![Esquema de Topología y Configuración de Red](img_munjean_reenvio_puertos.png)
+![Esquema de Topología y Configuración de Red](img_munjean\01_inicio\configuracion_ubuntu.png)
 
 

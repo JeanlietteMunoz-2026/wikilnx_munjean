@@ -9,7 +9,7 @@ La fase final de la misión consiste en desplegar nuestra Wiki Web construida co
 ### A. Instalación de Nginx e Infraestructura de Construcción
 Se inyecta el motor web en el sistema y se levantan los componentes para compilar nuestra aplicación React directamente en el servidor:
 
-```bash
+
 # Instalar el motor web Nginx y verificar su estado inicial
 sudo apt install -y nginx 
 systemctl status nginx 
@@ -46,4 +46,10 @@ sudo nginx -t
 
 # Recargar los demonios de Nginx en caliente sin interrumpir el servicio activo
 sudo systemctl reload nginx 
-3. COMPROBACIÓN DE DESPLIEGUE ACTIVO   Para verificar que Skynet sirve correctamente el servicio web, se adjuntan las capturas del correcto despliegue e interacción remota:(Captura del comando nginx -t mostrando "syntax is ok / test is successful")   (Captura del output de systemctl status nginx en verde activo)   (Captura clave: El navegador del PC anfitrión apuntando a http://localhost:8080 mostrando la Wiki de React en acción con estilo Skynet)
+3. COMPROBACIÓN DE DESPLIEGUE ACTIVO   Para verificar que Skynet sirve correctamente el servicio web, se adjuntan las capturas del correcto despliegue e interacción remota:
+
+![Validación de nginx](img_munjean/06_nginx/nginx_t.png)
+
+![Estado de nginx en sistema](img_munjean/06_nginx/welcome_nginx.png)
+
+![Vista de la wiki en el navegador](img_munjean/06_nginx/local_host_8080.png)

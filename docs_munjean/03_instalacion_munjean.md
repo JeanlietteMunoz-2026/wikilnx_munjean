@@ -1,18 +1,22 @@
 ## PROTOCOLO 3.1.2: INSTALACIÓN Y ENDURECIMIENTO DE RED 
 
-El inicio del procesador neuronal requiere la correcta parametrización de red, el nombramiento de la unidad de control, la inyección de actualizaciones críticas y el levantamiento de un escudo térmico contra ciberataques (UFW).
+Para poner en marcha el servidor de forma segura, es necesario configurar la red, asignarle un nombre único al equipo, instalar las últimas actualizaciones de seguridad y activar el cortafuegos (UFW) para proteger el sistema.
 
 ---
 
 ## 1. CONCEPTOS DE ENLACE TÁCTICO
 
-* **¿Qué es NAT (Network Address Translation)?**
-    Es un mecanismo de red que permite que múltiples computadores dentro de una red privada utilicen una única dirección IP pública para interactuar con internet. En nuestro laboratorio, VirtualBox actúa como el enrutador NAT, permitiendo que la VM acceda de forma segura a los repositorios externos de Ubuntu.
-* **¿Para qué sirve el Reenvío de Puertos (Port Forwarding)?**
-    Dado que una red NAT oculta las interfaces de la VM, el reenvío de puertos crea túneles estáticos que asocian un puerto del PC físico (Anfitrión) con un puerto de la máquina virtual (Huérfano). Sin este protocolo, la estación física no podría consultar la web expuesta en el puerto 80 del servidor virtual ni acceder por SSH.
-* **DHCP frente a IP Fija (Estática):**
-    * **DHCP (Dynamic Host Configuration Protocol):** Asigna configuraciones de red e IPs dinámicamente y con caducidad. No es recomendable para servidores, ya que si la IP cambia, todos los clientes de la red perderían el acceso.
-    * **IP Fija:** Se define manualmente en el sistema. Es la norma para servidores corporativos de Cyberdyne Systems, garantizando accesibilidad perpetua en un punto de montaje inalterable.
+¿Qué es NAT (Network Address Translation)?
+Es una tecnología que permite que varios computadores de una red privada salgan a internet usando una sola dirección IP pública. En nuestro laboratorio, VirtualBox se encarga de esto para que la máquina virtual pueda conectarse a internet y descargar paquetes de los repositorios de Ubuntu de forma segura.
+
+¿Para qué sirve el Reenvío de Puertos (Port Forwarding)?
+Como la red NAT oculta la máquina virtual para que no sea accesible directamente desde fuera, el reenvío de puertos crea un enlace directo entre un puerto del PC físico y un puerto de la máquina virtual. Sin esta configuración, sería imposible conectarse por SSH al puerto 22 de la VM o ver la página web del puerto 80 desde nuestro navegador en el computador anfitrión.
+
+DHCP frente a IP Fija (Estática):
+
+DHCP: Entrega la dirección IP y la configuración de red de forma automática y temporal. No se recomienda usarlo en servidores porque si la IP cambia en cualquier momento, los usuarios perderían el acceso a los servicios alojados.
+
+IP Fija: Se configura manualmente en el sistema para que no cambie nunca. Es el estándar para servidores en producción, ya que garantiza que el servidor siempre esté localizable en la misma dirección.
 
 ---
 
@@ -20,24 +24,34 @@ El inicio del procesador neuronal requiere la correcta parametrización de red, 
 
 ```bash
 # Configurar la identidad táctica del servidor en la red de Skynet
-sudo hostnamectl set-hostname srv-wiki 
+sudo hostnamectl set-hostname srv-wiki
 
 # Identificar la dirección IP local de enlace asignada por VirtualBox
-ip a 
+ip a
 
 # Descargar índices e inyectar todas las actualizaciones críticas de seguridad (hardenización)
-sudo apt update && sudo apt upgrade -y 
+sudo apt update && sudo apt upgrade -y
 
 # Endurecimiento del Cortafuegos (UFW)
 # ADVERTENCIA CRÍTICA: Se debe abrir el puerto SSH primero, de lo contrario se perderá el control de la terminal
 sudo ufw allow OpenSSH
 sudo ufw allow 80/tcp
-sudo ufw enable 
+sudo ufw enable
 
 # Inspeccionar el escudo protector del firewall con detalles
 sudo ufw status verbose
-3. EVIDENCIA DE CONFIGURACIÓN DEL SISTEMA   
-A. Identidad Táctica (Hostname)   (Captura del output de hostnamectl confirmando el nombre srv-wiki)   
-B. Mapeo de Direcciones de Red (IP Address)   (Captura del comando ip a mostrando la interfaz en la red local)   
-C. Inyección de Código de Seguridad (Upgrades)   (Captura del proceso exitoso de apt update && apt upgrade)   
-D. Reglas del Escudo Térmico (UFW Status)   (Captura de ufw status verbose mostrando puertos 22/tcp y 80/tcp activos)   
+```
+
+### 3. EVIDENCIA DE CONFIGURACIÓN DEL SISTEMA
+
+A. Identidad Táctica (Hostname)  
+![Hostname del servidor](img_munjean/03_instalacion/sudo_hostnamectl_ip_a.png)
+
+B. Mapeo de Direcciones de Red (IP Address)  
+![Dirección IP del servidor](img_munjean/03_instalacion/sudo_hostnamectl_ip_a.png)
+
+C. Inyección de Código de Seguridad (Upgrades)  
+![Proceso de actualización del sistema](img_munjean/03_instalacion/sudo_hostnamectl_ip_a.png)
+
+D. Reglas del Escudo Térmico (UFW Status)  
+![Estado del firewall](img_munjean/03_instalacion/sudo_ufw_allow_Open_SSH_status_verbose.png)   
