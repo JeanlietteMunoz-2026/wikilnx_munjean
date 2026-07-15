@@ -22,6 +22,12 @@ En nuestra estación de combate `srv-wiki`, el software clave responde a los sig
 1.  **Ubuntu Server (OS Core):** Es una distribución Linux con licenciamiento mixto, pero su base principal, el Kernel Linux, está bajo la licencia **GNU GPL v2** (Copyleft). Esto obliga a mantener el sistema abierto y transparente para la comunidad global.
 2.  **Nginx (Web Engine):** Utiliza una **licencia permisiva estilo BSD de 2 cláusulas** (Nginx License). Esto le confiere una flexibilidad extrema que permite a Cyberdyne Systems modificar el motor web para integrarlo en sistemas embebidos privados sin comprometer el código del núcleo corporativo.
 
+![Licencias LS](img_munjean/02_licencias/02_licencias_ls.png)
+
+![Licencias LS02](img_munjean/02_licencias/02_licencias_ls02.png)
+
+![Licencias LS03](img_munjean/02_licencias/02_licencias_ls03.png)
+
 ---
 
 ## 3. AUDITORÍA MEDIANTE LÍNEA DE COMANDOS
@@ -29,4 +35,5 @@ En nuestra estación de combate `srv-wiki`, el software clave responde a los sig
 Para verificar los términos legales integrados de forma local en la VM, se ejecutaron los siguientes protocolos CLI:
 
 ![Auditoría de licencias en consola](img_munjean/01_inicio/Red.NAT.png)
+
 
