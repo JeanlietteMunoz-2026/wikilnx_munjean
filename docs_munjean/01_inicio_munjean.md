@@ -33,6 +33,8 @@ Acceso SSH (Puerto 2222 Anfitrión -> Puerto 22 VM): Permite conectarse de forma
 ## 3. ESQUEMA DE INTERFACES ACTIVO 
 Para verificar la estabilidad del enlace antes de la fase de compilación, se adjunta la captura visual de red obtenido directamente del gestor de VirtualBox.
 
-![Esquema de Topología y Configuración de Red](img_munjean\01_inicio\configuracion_ubuntu.png)
+![Esquema de Topología y Configuración de Red](img_munjean/01_inicio/Red.NAT.png)
+
+![Reenvío de puertos y acceso remoto](img_munjean/01_inicio/reenvio_puertos.png)
 
 

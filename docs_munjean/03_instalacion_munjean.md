@@ -48,10 +48,10 @@ A. Identidad Táctica (Hostname)
 ![Hostname del servidor](img_munjean/03_instalacion/sudo_hostnamectl_ip_a.png)
 
 B. Mapeo de Direcciones de Red (IP Address)  
-![Dirección IP del servidor](img_munjean/03_instalacion/sudo_hostnamectl_ip_a.png)
+![Dirección IP del servidor](img_munjean/03_instalacion/Captura de pantalla 2026-07-13 205631.png)
 
 C. Inyección de Código de Seguridad (Upgrades)  
-![Proceso de actualización del sistema](img_munjean/03_instalacion/sudo_hostnamectl_ip_a.png)
+![Proceso de actualización del sistema](img_munjean/03_instalacion/Captura de pantalla 2026-07-13 205745.png)
 
 D. Reglas del Escudo Térmico (UFW Status)  
 ![Estado del firewall](img_munjean/03_instalacion/sudo_ufw_allow_Open_SSH_status_verbose.png)   

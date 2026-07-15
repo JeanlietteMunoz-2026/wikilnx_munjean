@@ -43,14 +43,14 @@ Durante la revisión de los documentos, se solicitó que cada sección incluyera
 
 - Seleccionar imágenes reales y existentes en la carpeta de documentación.
 - Asegurar que cada imagen corresponda al tema que se está describiendo.
-- Evitar rutas rotas, placeholders o referencias genéricas.
+- Evitar rutas rotas o referencias genéricas.
 - Usar capturas coherentes con procesos como instalación, firewall, permisos, paquetes y despliegue de Nginx.
 
 Esta decisión ayudó a que los archivos Markdown quedaran más claros, visuales y profesionales, mejorando la comprensión del laboratorio.
 
 ## 4. Reflexión sobre el Proceso de Trabajo
 
-El uso de la Inteligencia Artificial durante este laboratorio representó un cambio metodológico sustancial. Inicialmente, utilicé la IA como un **chatbot de consulta rápida** para resolver dudas sintácticas (como el significado de los comandos en Nano). Sin embargo, a medida que surgieron dificultades de configuración y errores de tipeo con Nginx, la interacción evolucionó a un rol de **asistente técnico/agente de depuración**. 
+El uso de la Inteligencia Artificial durante este laboratorio representó un cambio metodológico sustancial. Inicialmente, utilicé la IA como un **chatbot de consulta rápida** para resolver dudas sintácticas (como el significado de los comandos en Nano). Sin embargo, a medida que surgieron dificultades de configuración y errores de tipeo con Nginx, la interacción evolucionó a un rol de **asistente técnico**. 
 
 La IA no se limitó a "hacer el trabajo", sino que me enseñó a entender qué hacía cada comando (por ejemplo, la diferencia entre copiar el contenido o la carpeta de producción en `/var/www/`). Esto evitó bloqueos frustrantes por pequeños detalles (como un carácter de más en la terminal) y me permitió asimilar de mejor manera los conceptos prácticos de la administración de servidores Linux mediante comandos de consola. El balance final es sumamente positivo: la tecnología acelera el aprendizaje siempre y cuando se comprenda el trasfondo de las soluciones propuestas.
 

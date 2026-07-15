@@ -29,14 +29,14 @@ Es la mejor alternativa cuando solo queremos modificar un detalle específico si
 
 ---
 
-## 3.  EL COMANDO `CHOWN`
+## 2. EL COMANDO `CHOWN`
 
 ¿Para qué sirve el comando chown?
 Sirve para cambiar el propietario (dueño) y/o el grupo de un archivo o carpeta. Se usa mucho en servidores cuando necesitamos que un archivo que creamos nosotros pase a ser propiedad de un servicio del sistema (como el usuario de Nginx) para que pueda funcionar correctamente.
 
 ---
 
-## 4. PERMISOS ESPECIALES DE SEGURIDAD (SETGID Y STICKY BIT)
+## 3. PERMISOS ESPECIALES DE SEGURIDAD (SETGID Y STICKY BIT)
 
 Para asegurar el almacenamiento compartido y la integridad de los directorios públicos, se aplican técnicas avanzadas de administración:
 
@@ -47,7 +47,7 @@ Sticky Bit (se identifica con una t al final, ej. en /tmp): Sirve para mantener 
 
 ---
 
-## 5. EVIDENCIA DE PERMISOS EN LA CONSOLA 
+## 4. EVIDENCIA DE PERMISOS EN LA CONSOLA 
 
 A continuación, se adjunta el mapa de estado de permisos de archivos generado en la consola para auditar los cambios aplicados en la sección de demostración:
 

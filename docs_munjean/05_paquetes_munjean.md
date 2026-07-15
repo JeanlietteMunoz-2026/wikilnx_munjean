@@ -34,22 +34,32 @@ Por su bajísimo consumo de recursos y lo mucho que facilita el trabajo de monit
 
 ---
 
-## 3. INSTALACIÓN DE DIAGNÓSTICOS EN CALIENTE 
+## 3. INSTALACIÓN DE DIAGNÓSTICOS
 
-# Paso 1: Localizar los metadatos lógicos antes del despliegue del paquete htop
+### Paso 1: revisar los metadatos del paquete htop
+Antes de instalar cualquier herramienta, se consulta la información del paquete para confirmar que sea compatible con el sistema y que su consumo de recursos sea aceptable.
+
+```bash
 apt show htop
+```
 
 ![Información del paquete htop](img_munjean/05_paquetes/apt_show_htop.png)
 
-# Paso 2: Inyectar htop y tree al repositorio local de la VM
+### Paso 2: instalar htop y tree en la máquina virtual
+Una vez verificados los requisitos, se procede a instalar las herramientas de monitoreo y diagnóstico necesarias para el laboratorio.
+
+```bash
 sudo apt install -y htop tree
+```
 
 ![Instalación de htop y tree](img_munjean/05_paquetes/sudo_apt_install_htop_tree.png)
 
-# 4. EVIDENCIA DE INSTALACIÓN Y VERIFICACIÓN 
-A continuación, se documenta la inyección del paquete htop en la base de datos central de nuestro sistema operativo:
+### Paso 3: evidencia de instalación y verificación
+A continuación, se documenta la instalación del paquete htop y la verificación del funcionamiento del sistema.
 
 ![Captura del comando apt show htop](img_munjean/05_paquetes/apt_show_htop2.png)
 
 ![Captura de htop en ejecución](img_munjean/05_paquetes/apt_search_htop.png)
+
+![Búsqueda de paquetes con apt](img_munjean/05_paquetes/apt_search_top2.png)
 
